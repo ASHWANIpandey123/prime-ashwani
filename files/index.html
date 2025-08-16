@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GAMER NAME — Gameplay, Streams & Highlights</title>
+  <meta name="description" content="Official site for GAMER NAME — gameplay videos, livestream schedule, merch and collabs." />
+  <meta property="og:title" content="GAMER NAME — Gameplay, Streams & Highlights" />
+  <meta property="og:description" content="Gameplay videos, livestream schedule, and community from GAMER NAME." />
+  <meta property="og:image" content="assets/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="assets/favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-grid">
+      <a class="logo" href="#home">GAMER NAME</a>
+      <nav class="main-nav" role="navigation" aria-label="Primary">
+        <a href="#videos">Videos</a>
+        <a href="#live">Live</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="actions">
+        <a id="subscribe-btn" class="btn subscribe" href="#" target="_blank" rel="noopener">Subscribe</a>
+        <button id="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" class="hamburger" aria-label="Open menu">☰</button>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="mobile-menu" hidden>
+      <a href="#videos">Videos</a>
+      <a href="#live">Live</a>
+      <a href="#schedule">Schedule</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero container">
+      <div class="hero-left">
+        <h1>GAMER NAME</h1>
+        <p class="sub">Walkthroughs • Highlights • Live streams — new videos weekly.</p>
+        <div class="hero-ctas">
+          <button id="watch-latest" class="btn primary">Watch Latest</button>
+          <a href="#videos" class="btn outline">All Videos</a>
+          <a href="#live" class="btn ghost">Watch Live</a>
+        </div>
+        <div class="socials" aria-hidden="false">
+          <a href="#" id="yt-link" target="_blank" rel="noopener" aria-label="YouTube"><span class="icon">▶</span></a>
+          <a href="#" id="tw-link" target="_blank" rel="noopener" aria-label="Twitch"><span class="icon">🟣</span></a>
+          <a href="#" id="dc-link" target="_blank" rel="noopener" aria-label="Discord"><span class="icon">💬</span></a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div id="hero-thumb" class="video-card" role="button" tabindex="0" aria-pressed="false" aria-label="Play latest video">
+          <img src="assets/thumbnail-placeholder.jpg" alt="Latest video thumbnail" loading="lazy">
+          <div class="play">▶</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="videos" class="section container">
+      <header class="section-header">
+        <h2>Latest Videos</h2>
+        <p class="muted">Recent uploads and highlights from the channel.</p>
+      </header>
+      <div id="videos-grid" class="grid" aria-live="polite">
+        <!-- JS will populate tiles or placeholders -->
+      </div>
+      <div class="center">
+        <a id="youtube-channel" class="btn outline" href="#" target="_blank" rel="noopener">Visit YouTube Channel</a>
+      </div>
+    </section>
+
+    <section id="live" class="section dark container">
+      <header class="section-header">
+        <h2>Live Stream</h2>
+        <p class="muted">Watch live on Twitch — schedule below.</p>
+      </header>
+      <div class="live-grid">
+        <div class="twitch-embed" id="twitch-embed">
+          <!-- Lazy iframe inserted by JS; requires config.TWITCH_CHANNEL and correct parent param when deployed -->
+          <div class="embed-placeholder">Twitch stream will appear here when live.</div>
+        </div>
+        <aside class="schedule">
+          <h3>Streaming Schedule</h3>
+          <ul>
+            <li><strong>Mon</strong> — 19:00 UTC</li>
+            <li><strong>Wed</strong> — 19:00 UTC</li>
+            <li><strong>Sat</strong> — Event / Tournament</li>
+          </ul>
+          <a class="btn primary" href="#contact">Request a Game</a>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about" class="section container">
+      <header class="section-header">
+        <h2>About</h2>
+        <p class="muted">Who I am and what I stream.</p>
+      </header>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>Hey — I'm GAMER NAME. I upload guides, competitive gameplay, and livestream with the community. Subscribe for weekly uploads and join the Discord for giveaways.</p>
+          <ul>
+            <li>Weekly videos — tips & walkthroughs</li>
+            <li>Viewer challenges and giveaways</li>
+            <li>Pro-level commentary and breakdowns</li>
+          </ul>
+          <div class="about-cta">
+            <a href="#videos" class="btn outline">Watch Videos</a>
+            <a href="#contact" class="btn primary">Contact</a>
+          </div>
+        </div>
+        <div class="about-media">
+          <img src="assets/profile-placeholder.jpg" alt="Gamer profile" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section dark container">
+      <header class="section-header">
+        <h2>Contact</h2>
+        <p class="muted">Business, collabs or sponsorships — hit me up.</p>
+      </header>
+      <div class="contact-grid">
+        <form id="contact-form" class="contact-form" action="" method="POST" novalidate>
+          <label>
+            <span>Name</span>
+            <input name="name" required>
+          </label>
+          <label>
+            <span>Email</span>
+            <input name="email" type="email" required>
+          </label>
+          <label>
+            <span>Message</span>
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+          <div class="form-actions">
+            <button class="btn primary" type="submit">Send Message</button>
+            <button class="btn outline" id="mailto-btn" type="button">Email Me</button>
+          </div>
+        </form>
+        <div class="contact-info">
+          <h3>Quick Links</h3>
+          <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+          <p>Merch: <a id="merch-link" href="#" target="_blank" rel="noopener">Shop</a></p>
+          <h4>Join Community</h4>
+          <a class="btn ghost" id="discord-link" href="#" target="_blank" rel="noopener">Discord</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer container" role="contentinfo">
+    <div class="footer-left">© <span id="year"></span> GAMER NAME</div>
+    <div class="footer-right">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+    </div>
+  </footer>
+
+  <!-- Video Modal (lazy-load iframe) -->
+  <div id="video-modal" class="modal" aria-hidden="true" role="dialog" aria-label="Video player">
+    <div class="modal-content">
+      <button id="modal-close" class="modal-close" aria-label="Close player">✕</button>
+      <div id="player" class="player"></div>
+    </div>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
